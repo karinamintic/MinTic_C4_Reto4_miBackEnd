@@ -14,15 +14,15 @@ public class OrderService {
 
     @Autowired
     private OrderRepository orderRepository;
-
+    
     public List<Order> getAll() {
         return orderRepository.getAll();
     }
-
+    
     public Optional<Order> getOrder(Integer id) {
         return orderRepository.getOrder(id);
     }
-
+    
     public Order create(Order order){
         if(order.getId()!= null){
             return orderRepository.create(order);
@@ -30,7 +30,7 @@ public class OrderService {
             return order;
         }
     }
-
+    
     public Order update(Order order) {
         if (order.getId() != null) {
             Optional<Order> orden = orderRepository.getOrder(order.getId());
@@ -68,14 +68,14 @@ public class OrderService {
             return order;
         }
     }
-
+    
     public boolean delete(Integer id) {
         return getOrder(id).map(order -> {
             orderRepository.delete(order);
             return true;
-        }).orElse(false);
+        }).orElse(false);        
     }
-
+    
     public List<Order> getZone(String zone){
         return orderRepository.getZone(zone);
     }

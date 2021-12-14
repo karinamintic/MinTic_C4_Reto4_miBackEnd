@@ -14,48 +14,47 @@ import org.springframework.stereotype.Repository;
 @Repository
 public class OrderRepository {
     @Autowired
-    private OrderCrudRepository orderCrudRepository;
+    private OrderCrudRepository orderInterface;
     
     public List<Order> getAll(){
-        return orderCrudRepository.findAll();
+        return orderInterface.findAll();
     }
     
     public Optional<Order> getOrder(Integer id){
-        return orderCrudRepository.findById(id);
+        return orderInterface.findById(id);
     }
     
     public Order create(Order order){
-        return orderCrudRepository.save(order);
+        return orderInterface.save(order);
     }
     
     public void update(Order order){
-        orderCrudRepository.save(order);
+        orderInterface.save(order);
     }
     
     public void delete(Order order){
-        orderCrudRepository.delete(order);
+        orderInterface.delete(order);
     }
     
     public List<Order> getZone(String zone){
-        return orderCrudRepository.findBySalesManZone(zone);
+        return orderInterface.findBySalesManZone(zone);
     }
 
     public List<Order> getBySalesManId(Integer id){
-        return orderCrudRepository.findBySalesManId(id);
+        return orderInterface.findBySalesManId(id);
     }
 
     public List<Order> getBySalesManIdAndStatus(Integer id, String status){
-        return orderCrudRepository.findBySalesManIdAndStatus(id, status);
+        return orderInterface.findBySalesManIdAndStatus(id, status);
     }
 
     public List<Order> getByRegisterDayAndSalesManId(String registerDay, Integer id){
         try {
-            return orderCrudRepository.findByRegisterDayAndSalesManId(new SimpleDateFormat("yyyy-MM-dd").parse(registerDay), id);
+            return orderInterface.findByRegisterDayAndSalesManId(new SimpleDateFormat("yyyy-MM-dd").parse(registerDay), id);
         } catch (ParseException e) {
             e.printStackTrace();
             return null;
         }
     }
-
 
 }
