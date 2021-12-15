@@ -1,0 +1,16 @@
+Reto4\repository\Interface\UserInterface.class
+Reto4\repository\UserRepository.class
+Reto4\service\CosmeticsService.class
+Reto4\Reto4Application.class
+Reto4\repository\OrderRepository.class
+Reto4\controller\UserController.class
+Reto4\service\UserService.class
+Reto4\repository\CosmeticsRepository.class
+Reto4\repository\Interface\CosmeticsInterface.class
+Reto4\model\Cosmetics.class
+Reto4\repository\Interface\OrderInterface.class
+Reto4\model\User.class
+Reto4\controller\CosmeticsController.class
+Reto4\model\Order.class
+Reto4\controller\OrderController.class
+Reto4\service\OrderService.class
