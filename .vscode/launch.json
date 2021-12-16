@@ -2,6 +2,12 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Reto4Application",
+            "request": "launch",
+            "mainClass": "Reto4.Reto4Application"
+        },
+        {
+            "type": "java",
             "name": "Spring Boot-Reto4Application<reto4>",
             "request": "launch",
             "cwd": "${workspaceFolder}",
