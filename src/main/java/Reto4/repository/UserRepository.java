@@ -46,5 +46,13 @@ public class UserRepository {
     public void delete(User user){
         userInterface.delete(user);
     }
-    
+
+     /**
+     * This method returns a user by its monthBirthDay
+     * @param month
+     * @return
+     */
+    public List<User> getByMonthBirthDay(String month){
+        return userInterface.findByMonthBirthtDay(month);
+    }
 }

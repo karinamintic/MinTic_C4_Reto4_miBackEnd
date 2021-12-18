@@ -56,5 +56,15 @@ public class CosmeticsController {
     public boolean delete(@PathVariable("reference") String cosmetics) {
         return cosmeticsService.delete(cosmetics);
     }
+
+    @GetMapping("/price/{price}")
+    public List<Cosmetics> getByPrice(@PathVariable("price") double price){
+        return cosmeticsService.getByPrice(price);
+    }
+
+    @GetMapping("/description/{description}")
+    public List<Cosmetics> getByDescriptionContains(@PathVariable("description") String description){
+        return cosmeticsService.getByDescriptionContains(description);
+    }
    
 }

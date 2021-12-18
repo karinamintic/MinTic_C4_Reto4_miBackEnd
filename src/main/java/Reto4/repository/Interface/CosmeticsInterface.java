@@ -9,5 +9,6 @@ import org.springframework.data.mongodb.repository.MongoRepository;
 
 
 public interface CosmeticsInterface extends MongoRepository<Cosmetics, String> {
-    
+    public List<Clothe> findByPrice(double price);
+    public List<Clothe> findByDescriptionContainingIgnoreCase(String description);
 }

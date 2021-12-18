@@ -68,6 +68,9 @@ public class UserController {
     public boolean delete(@PathVariable("id") Integer id){
         return userService.delete(id);
     }
-    
-    
+
+    @GetMapping("/birthday/{month}")
+    public List<User> getByMonthBirthDay(@PathVariable("month") String month){
+        return userService.getByMonthBirthDay(month);
+    }
 }

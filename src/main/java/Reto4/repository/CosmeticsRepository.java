@@ -36,5 +36,13 @@ public class CosmeticsRepository {
     public void delete(Cosmetics cosmetics) {
         cosmeticsInterface.delete(cosmetics);
     }
+
+    public List<Cosmetics> getByPrice(double price){
+        return cosmeticsInterface.findByPrice(price);
+    }
+
+    public List<Cosmetics> getByDescriptionContains(String description){
+        return cosmeticsInterface.findByDescriptionContainingIgnoreCase(description);
+    }
     
 }
