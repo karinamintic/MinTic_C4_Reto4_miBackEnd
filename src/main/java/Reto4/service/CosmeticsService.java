@@ -79,12 +79,4 @@ public class CosmeticsService {
         return aBoolean;
     }
 
-    public List<Cosmetics> getByPrice(double price){
-        return cosmeticsRepository.getByPrice(price);
-    }
-
-    public List<Cosmetics> getByDescriptionContains(String description){
-        return cosmeticsRepository.getByDescriptionContains(description);
-    }
-
 }
