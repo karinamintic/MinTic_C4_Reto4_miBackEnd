@@ -15,6 +15,16 @@
             "mainClass": "com.mintic.reto4.Reto4Application",
             "projectName": "reto4",
             "args": ""
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-Reto4Application<Reto4>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "Reto4.Reto4Application",
+            "projectName": "Reto4",
+            "args": ""
         }
     ]
 }
